@@ -1,0 +1,70 @@
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 3em;
+    background-color: var(--dark-100);
+}
+
+.itens {
+    display: flex;
+    gap: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.itens li {
+    list-style: none;
+}
+
+.logo, .item, .itemActive, .itemDanger {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.logo, .item, .itemActive {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--green-200);
+}
+
+.item, .itemActive, .itemDanger {
+font-size: 1.1em;
+}
+
+.item {
+    color: var(--white-200);
+    transition: 0.30s ease-in;
+}
+
+.item:hover {
+    color: var(--white-100);
+    transition: 0.30s ease-out;
+}
+
+.itemActive {
+    color: var(--green-200);
+    border-bottom: 2px solid var(--green-200);
+    padding-bottom: 5px;
+}
+
+.itemDanger {
+    border: none;
+    background: none;
+    color: var(--red-200);
+    transition: 0.30s ease-in;
+    cursor: pointer;
+    outline: none;
+}
+
+.itemDanger:hover {
+    color: var(--red-100);
+    transition: 0.30s ease-out;
+}

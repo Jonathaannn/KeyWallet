@@ -1,0 +1,152 @@
+.screen {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(31, 45, 64, 0.5);
+}
+
+.container {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  background: rgba(31, 45, 64, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 1em;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+}
+
+.close {
+  position: absolute;
+  right: 1em;
+  color: var(--white-200);
+  background: var(--dark-200);
+  padding: 0.25em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: 0.25s ease-in;
+}
+
+.close:hover {
+  color: var(--red-100);
+  background: var(--dark-100);
+  transition: 0.25s ease-in;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green-200);
+  border-radius: 0.2em;
+  color: var(--white-200);
+  font-size: 1.5em;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  background: rgba(10, 166, 122, 0.4);
+  border: 1px solid var(--green-200);
+  border-radius: 0.5em;
+  padding: 0.75em 1.5em;
+  font-size: 1.1em;
+  color: var(--white-100);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  border-radius: 0.5em;
+  background: var(--dark-100);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 0.75em 1em;
+  box-sizing: border-box;
+  transition: 0.25s ease-in;
+  border-radius: 0.5em;
+}
+
+.item:hover {
+  background: var(--dark-200);
+  transition: 0.25s ease-out;
+}
+
+.info {
+  width: 78%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.info span{
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--green-200);
+}
+
+.info p {
+  margin: 0;
+  font-size: 1.15em;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--white-200);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.buttons {
+  width: 93px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5em;
+  flex-grow: 0;
+}
+
+.button {
+  padding: 0.5em;
+  border-radius: 5px;
+  background: var(--dark-200);
+  color: var(--white-200);
+  border: 2px solid var(--dark-200);
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--dark-100);
+  color: var(--green-200);
+  border: 2px solid var(--green-200);
+}
+
+.item:hover .button {
+  background: var(--dark-100);
+}
