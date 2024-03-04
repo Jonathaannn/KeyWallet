@@ -30,6 +30,7 @@ const Login = () => {
 
   return (
     <div className={`${Style.container}`}>
+      <h1>KeyWallet <span>Suas chaves mais seguras</span></h1>
       <div className={`${Style.form}`}>
         <h3>Login</h3>
         <form onSubmit={handleSubmit(handleLogin)}>
