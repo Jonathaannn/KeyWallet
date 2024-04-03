@@ -79,10 +79,9 @@ const FormCreate = () => {
             id="password"
             required
             placeholder="Password"
-            value={generatePass}
             onChange={(e) => {
               setGeneratePass(e.target.value);
-              setValue("password", e.target.value);
+              setValue("password", generatePass);
             }}
             {...register("password")}
           />
