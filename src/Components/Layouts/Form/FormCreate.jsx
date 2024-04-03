@@ -34,14 +34,17 @@ const FormCreate = () => {
   const { token } = useAuth();
   const handleSaveAccount = async (data) => {
     const { name, site, username, password } = data;
-    const response = await fetch(process.env.REACT_APP_BASE_URL+"/api/account/create", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({ name, site, username, password }),
-    });
+    const response = await fetch(
+      process.env.REACT_APP_BASE_URL + "/api/account/create",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ name, site, username, password }),
+      }
+    );
     if (!response.ok) {
       alert("Erro ao salvar a nova chave!");
     }
@@ -77,7 +80,10 @@ const FormCreate = () => {
             required
             placeholder="Password"
             value={generatePass}
-            onChange={e => setGeneratePass(e.target.value)}
+            onChange={(e) => {
+              setGeneratePass(e.target.value);
+              setValue("password", e.target.value);
+            }}
             {...register("password")}
           />
           {errors.password && <p>{errors.password?.message}</p>}
