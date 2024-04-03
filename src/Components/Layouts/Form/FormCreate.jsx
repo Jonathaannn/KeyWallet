@@ -77,6 +77,7 @@ const FormCreate = () => {
             required
             placeholder="Password"
             value={generatePass}
+            onChange={e => setGeneratePass(e.target.value)}
             {...register("password")}
           />
           {errors.password && <p>{errors.password?.message}</p>}
